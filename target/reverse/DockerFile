@@ -1,0 +1,5 @@
+FROM python:3.11-slim
+WORKDIR /rev
+COPY . /rev
+RUN chmod +x flag_binary.py
+CMD ["sleep","infinity"]
