@@ -1,0 +1,9 @@
+<!doctype html>
+<title>Users</title>
+<h1>Users</h1>
+<ul>
+{% for u in users %}
+  <li>{{ u[1] }} (id: {{ u[0] }})</li>
+{% endfor %}
+</ul>
+<a href="/">Home</a>
