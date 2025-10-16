@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  web:
+    build: ./target/app
+    container_name: ctf_simple_web
+    ports:
+      - "8081:80"
+    networks:
+      - ctfnw
+  reverse:
+    build: ./target/reverse
+    container_name: ctf_simple_rev
+    command: ["sleep","infinity"]
+    networks:
+      - ctfnw
+
+networks:
+  ctfnw:
+    driver: bridge
